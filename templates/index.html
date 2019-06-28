@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% load i18n %}
+{% comment %}
+This is where you can override the hero area block. You can simply modify the content below or replace it wholesale to meet your own needs.
+{% endcomment %}
+{% block title %} {% trans "ONSDI" %} - {{ block.super }} {% endblock %}
+{% block hero %}
+<div class="jumbotron">
+  <div class="container">
+      <h1>{{custom_theme.jumbotron_welcome_title|default:_("ONSDI")}}</h1>
+      <p></p>
+      <p>{{custom_theme.jumbotron_welcome_content|default:_("Mauritius Open Source National Spatial Data Infrastructures")}}</p>
+
+  </div>
+</div>
+{% endblock hero %}
+    
+
+
+{% block datasets %}
+
+{% endblock datasets %}
